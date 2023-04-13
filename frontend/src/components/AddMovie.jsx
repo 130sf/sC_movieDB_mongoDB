@@ -49,7 +49,7 @@ const AddMovie = ({ setMovies }) => {
 
     return (
         <form>
-            <h1>Add your favorite movie to our list!</h1>
+            <h1>Add your favorite movie to this list!</h1>
 
             <div style={{display: "grid", gridTemplateColumns: "1fr 2fr"}}>
                 <label htmlFor="title">Title</label>

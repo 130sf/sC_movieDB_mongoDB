@@ -26,7 +26,6 @@ app.get("/movies/:id", (req, res) => {
         .then(movie => res.json(movie))
 })
 
-//  express.json() body parser hier gleich einfügen...
 app.post("/movies", express.json(), (req, res) => {
     const newMovie = {
         title: req.body.title,
@@ -38,7 +37,7 @@ app.post("/movies", express.json(), (req, res) => {
     }
 
     addMovieToDB(newMovie)
-        .then((addedMovie) => res.json(addedMovie)) // addedMovie hat auch eine id...
+        .then((addedMovie) => res.json(addedMovie))
 })
 
 app.listen(PORT, () => console.log("Server listening on PORT", PORT))
